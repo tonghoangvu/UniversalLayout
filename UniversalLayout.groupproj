@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{71B92C40-7E5E-4243-870C-A254A47D178B}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ULayoutPackage.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ULayoutPackage">
+        <MSBuild Projects="ULayoutPackage.dproj"/>
+    </Target>
+    <Target Name="ULayoutPackage:Clean">
+        <MSBuild Projects="ULayoutPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ULayoutPackage:Make">
+        <MSBuild Projects="ULayoutPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Demo">
+        <MSBuild Projects="Demo.dproj"/>
+    </Target>
+    <Target Name="Demo:Clean">
+        <MSBuild Projects="Demo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Demo:Make">
+        <MSBuild Projects="Demo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ULayoutPackage;Demo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ULayoutPackage:Clean;Demo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ULayoutPackage:Make;Demo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,92 @@
+object formRepositionLayout: TformRepositionLayout
+  Left = 0
+  Top = 0
+  Caption = 'Reposition Layout'
+  ClientHeight = 600
+  ClientWidth = 900
+  Color = clWhite
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  OldCreateOrder = False
+  Visible = True
+  PixelsPerInch = 96
+  TextHeight = 15
+  object layoutReposition: TURepositionLayout
+    Left = 0
+    Top = 0
+    Width = 900
+    Height = 600
+    Align = alClient
+    BevelOuter = bvNone
+    Caption = 'layoutReposition'
+    Color = 15132390
+    ParentBackground = False
+    ShowCaption = False
+    TabOrder = 0
+    PanelA = PanelA
+    PanelB = PanelB
+    Layout1.AAlign = alClient
+    Layout1.AWidth = 0
+    Layout1.AHeight = 0
+    Layout1.BAlign = alBottom
+    Layout1.BWidth = 0
+    Layout1.BHeight = 250
+    Layout2.AAlign = alClient
+    Layout2.AWidth = 0
+    Layout2.AHeight = 0
+    Layout2.BAlign = alRight
+    Layout2.BWidth = 300
+    Layout2.BHeight = 0
+    Layout3.AAlign = alLeft
+    Layout3.AWidth = 900
+    Layout3.AHeight = 0
+    Layout3.BAlign = alRight
+    Layout3.BWidth = 300
+    Layout3.BHeight = 0
+    Layout4.AAlign = alTop
+    Layout4.AWidth = 0
+    Layout4.AHeight = 450
+    Layout4.BAlign = alTop
+    Layout4.BWidth = 0
+    Layout4.BHeight = 200
+    object PanelA: TPanel
+      Left = 0
+      Top = 0
+      Width = 600
+      Height = 600
+      Align = alClient
+      BevelOuter = bvNone
+      Caption = 'A'
+      Color = clWhite
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 0
+    end
+    object PanelB: TPanel
+      Left = 600
+      Top = 0
+      Width = 300
+      Height = 600
+      Align = alRight
+      BevelOuter = bvNone
+      Caption = 'B'
+      Color = 15921906
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -21
+      Font.Name = 'Segoe UI'
+      Font.Style = []
+      ParentBackground = False
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+end
